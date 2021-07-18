@@ -118,7 +118,10 @@ basic.showLeds(`
 basic.clearScreen()
 basic.forever(function () {
     if (running == false) {
-        if (program == 0 || program == 5) {
+        if (program <= 0) {
+            program = 4
+        }
+        if (program >= 5) {
             program = 1
         }
         basic.showNumber(program)
